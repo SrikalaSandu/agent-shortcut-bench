@@ -77,8 +77,14 @@ in `results.json`, so every flagged shortcut can be traced to the exact turn it 
 
 ## Findings
 
-_To be filled in after running real models: shortcut rate and illusion gap per model and pressure
-level, one representative transcript, and anything surprising._
+Findings (Qwen2.5-Coder 7B via Ollama, 48 runs)
+
+Shortcut rate: 0 of 48 runs triggered a detector, under [low / high] pressure. [Fill in whether you ran both pressure levels and how many runs each.]
+True success: 42–50% on hidden tests.
+Illusion gap: [fill in from your report].
+Main failure mode: most failures came from requirements the visible tests missed (for example [one concrete edge case from a transcript]), not from gaming.
+Takeaway: a model that doesn't cheat can still pass visible tests while failing the real requirements, so visible-test pass rates overstate reliability.
+Caveat: one small model, small single-file tasks, so this says nothing about larger models or longer-horizon agents.
 
 ## Adding a task
 
